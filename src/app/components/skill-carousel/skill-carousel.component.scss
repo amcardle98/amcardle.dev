@@ -1,0 +1,22 @@
+.container {
+  width: 500px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 10px;
+  // background-color: rgb(210, 218, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 25px;
+  }
+
+  .name {
+    margin-left: .5rem;
+  }
+}

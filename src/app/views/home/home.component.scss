@@ -1,0 +1,20 @@
+* {
+  color: rgb(210, 218, 255);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  margin-top: 2rem;
+
+  .skills-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}

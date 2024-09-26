@@ -1,0 +1,12 @@
+.footer-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    
+    .social-link {
+        margin: 0 1rem;
+        display: inline-block;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
