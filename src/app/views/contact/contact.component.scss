@@ -1,18 +1,21 @@
 .container {
-  width: 500px;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  
 }
 
-form {
+.form {
+  width: 100%; /* Ensure form takes up full width */
+  max-width: 600px; /* Set a max-width to avoid stretching on large screens */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
 
-  input {
+  input,
+  textarea {
     padding: 10px 0;
     margin: 10px 0;
     width: 100%;
@@ -24,14 +27,7 @@ form {
   }
 
   textarea {
-    padding: 10px 0;
-    margin: 10px 0;
-    width: 100%;
-    border: none;
-    font-size: 16px;
-    border-bottom: 1px solid rgb(210, 218, 255);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: rgb(210, 218, 255);
+    resize: vertical; // Allow textareas to resize vertically only
   }
 
   button {
@@ -43,5 +39,11 @@ form {
     font-size: 16px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer; // Add cursor for better UX
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(180, 190, 230); // Slightly darker background on hover
+    }
   }
 }

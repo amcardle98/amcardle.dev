@@ -9,31 +9,36 @@
 
 .body {
   margin-bottom: auto;
+  width: 100%;
 }
 
 .footer {
   width: 100%;
 }
-@media screen and (max-width: 359px) {
+
+//mobile view
+@media screen and (max-width: 599px) {
   .body {
-    max-width: 200px;
+    max-width: 300px;
   }
 }
 
-/* Media queries */
-@media screen and (min-width: 360px) {
+//larger mobile view
+@media screen and (min-width: 600px) {
   .body {
     max-width: 300px; /* Adjust max-width for larger screens */
   }
 }
 
-@media screen and (min-width: 568px) {
+//tablet view
+@media screen and (min-width: 768px) {
   .body {
     max-width: 500px; /* Further adjust for even larger screens */
   }
 }
 
-@media screen and (min-width: 666px) {
+//desktop view
+@media screen and (min-width: 992px) {
   .body {
     max-width: 700px; /* Max-width for desktop */
   }
