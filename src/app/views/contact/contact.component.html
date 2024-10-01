@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Get in touch with me!</h2>
 
-  <form class="form">
+  <form class="form" *ngIf="false">
     <div class="name">
       <input
         type="text"
@@ -35,4 +35,22 @@
       <button type="submit">Submit</button>
     </div>
   </form>
+
+  <div class="contact-info">
+    <div class="contact-info-sub">
+      <div>Send an email to</div>
+      <div style="display: flex">
+        <a href="mailto:me@amcardle.dev"
+          ><img
+            src="../../../assets/icons/Email icon 64 (1).png"
+            alt=""
+            width="40"
+          />
+        </a>
+      </div>
+    </div>
+    <h3>OR</h3>
+    <div class="contact-info-sub" style="margin-top: 1rem;"></div>
+    <div>Message me on any one of my socials down below</div>
+  </div>
 </div>

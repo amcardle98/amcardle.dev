@@ -1,6 +1,7 @@
 .footer-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 2rem 0;
     
     .social-link {
@@ -8,5 +9,11 @@
         display: inline-block;
         border-radius: 5px;
         cursor: pointer;
+    }
+    
+    .cp {
+        font-size: 12px;
+        margin-top: 1rem;
+        color: rgba(255, 255, 255, 0.455);
     }
 }
