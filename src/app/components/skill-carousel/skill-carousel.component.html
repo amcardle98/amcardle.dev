@@ -1,7 +1,7 @@
 <div class="container">
-  <ngx-fast-marquee [speed]="100">
+  <ngx-fast-marquee [speed]="100" [pauseOnHover]="true">
     <div *ngFor="let item of shuffledItems" class="skill">
-      <img src={{item.iconUrl}} alt="">
+      <img src="{{ item.iconUrl }}" alt="" />
       <div class="name">{{ item.name }}</div>
     </div>
   </ngx-fast-marquee>
