@@ -3,10 +3,10 @@ import { SkillCarouselComponent } from 'src/app/components/skill-carousel/skill-
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   imports: [SkillCarouselComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  standalone: true,
 })
 export class HomeComponent {
   constructor() {}

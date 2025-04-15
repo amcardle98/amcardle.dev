@@ -6,10 +6,10 @@ import { of, map } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
-  standalone: true,
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
   imports: [RouterModule, CommonModule, AsyncPipe],
+  standalone: true,
 })
 export class NavComponent {
   routes = of(routes).pipe(

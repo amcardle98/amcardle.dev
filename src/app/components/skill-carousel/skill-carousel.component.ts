@@ -5,10 +5,10 @@ import { skillCarouselItems } from './skill-carousel.constants';
 
 @Component({
   selector: 'app-skill-carousel',
-  standalone: true,
   imports: [NgxFastMarqueeModule, CommonModule],
   templateUrl: './skill-carousel.component.html',
   styleUrls: ['./skill-carousel.component.scss'],
+  standalone: true,
 })
 export class SkillCarouselComponent {
   items = skillCarouselItems;
