@@ -1,0 +1,147 @@
+<div class="builder-container">
+  <h1>Website Builder Prompt Generator</h1>
+  <p class="subtitle">
+    Fill in the details below to generate your custom website prompt
+  </p>
+
+  <div class="prompt-input">
+    <p>
+      Create a mock website for a <input type="text" />. The purpose of the
+      website is <input type="text" />. The color scheme of the website is
+      <input type="text" />. The layout style of the website is
+      <input type="text" />. The required features of the website are
+      <input type="text" />. The custom requirements of the website are
+      <input type="text" />. The target audience of the website is
+      <input type="text" />.
+    </p>
+  </div>
+
+  <form
+    [formGroup]="builderForm"
+    (ngSubmit)="generatePrompt()"
+    class="builder-form"
+  >
+    <!-- Basic Information Section -->
+    <section class="form-section">
+      <div class="form-group">
+        <label for="websiteName">Website Name</label>
+        <input
+          id="websiteName"
+          type="text"
+          formControlName="websiteName"
+          placeholder="Enter your website name"
+          class="form-input"
+        />
+      </div>
+      <div class="form-group">
+        <label for="websitePurpose">Website Purpose</label>
+        <select
+          id="websitePurpose"
+          formControlName="websitePurpose"
+          class="form-input"
+        >
+          <option value="">Select a purpose</option>
+          <option value="portfolio">Portfolio</option>
+          <option value="business">Business</option>
+          <option value="ecommerce">E-commerce</option>
+          <option value="blog">Blog</option>
+          <option value="landing">Landing Page</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Design Preferences Section -->
+    <section class="form-section">
+      <h2>Design Preferences</h2>
+      <div class="form-group">
+        <label for="colorScheme">Color Scheme</label>
+        <select
+          id="colorScheme"
+          formControlName="colorScheme"
+          class="form-input"
+        >
+          <option value="">Select a color scheme</option>
+          <option value="modern">Modern (Clean & Minimal)</option>
+          <option value="vibrant">Vibrant (Bold & Colorful)</option>
+          <option value="professional">Professional (Corporate)</option>
+          <option value="dark">Dark Mode</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="layoutStyle">Layout Style</label>
+        <select
+          id="layoutStyle"
+          formControlName="layoutStyle"
+          class="form-input"
+        >
+          <option value="">Select a layout style</option>
+          <option value="grid">Grid Layout</option>
+          <option value="single">Single Page</option>
+          <option value="multi">Multi-page</option>
+          <option value="card">Card-based</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="form-section">
+      <h2>Required Features</h2>
+      <div class="checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" formControlName="hasContactForm" /> Contact
+          Form
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" formControlName="hasGallery" /> Image Gallery
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" formControlName="hasBlog" /> Blog Section
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" formControlName="hasNewsletter" /> Newsletter
+          Signup
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" formControlName="hasSocialMedia" /> Social
+          Media Integration
+        </label>
+      </div>
+    </section>
+
+    <!-- Custom Requirements Section -->
+    <section class="form-section">
+      <h2>Custom Requirements</h2>
+      <div class="form-group">
+        <label for="customFeatures">Additional Features</label>
+        <textarea
+          id="customFeatures"
+          formControlName="customFeatures"
+          placeholder="List any additional features or requirements..."
+          class="form-textarea"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="targetAudience">Target Audience</label>
+        <textarea
+          id="targetAudience"
+          formControlName="targetAudience"
+          placeholder="Describe your target audience..."
+          class="form-textarea"
+        ></textarea>
+      </div>
+    </section>
+
+    <button type="submit" class="submit-button">Generate Prompt</button>
+  </form>
+
+  <!-- Generated Prompt Section -->
+  <div *ngIf="generatedPrompt" class="prompt-section">
+    <h2>Your Generated Prompt</h2>
+    <div class="prompt-container">
+      <pre>{{ generatedPrompt }}</pre>
+      <button class="copy-button" (click)="copyPrompt()">
+        Copy to Clipboard
+      </button>
+    </div>
+  </div>
+</div>

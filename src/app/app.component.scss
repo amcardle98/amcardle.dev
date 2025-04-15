@@ -3,44 +3,16 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  max-width: 600px; /* Base max-width for mobile */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .body {
   margin-bottom: auto;
-  width: 100%;
+  width: 80%;
+  margin: 0 5rem;
 }
 
 .footer {
   width: 100%;
 }
-
-//mobile view
-@media screen and (max-width: 599px) {
-  .body {
-    max-width: 300px;
-  }
-}
-
-//larger mobile view
-@media screen and (min-width: 600px) {
-  .body {
-    max-width: 300px; /* Adjust max-width for larger screens */
-  }
-}
-
-//tablet view
-@media screen and (min-width: 768px) {
-  .body {
-    max-width: 500px; /* Further adjust for even larger screens */
-  }
-}
-
-//desktop view
-@media screen and (min-width: 992px) {
-  .body {
-    max-width: 700px; /* Max-width for desktop */
-  }
-}
-

@@ -1,13 +1,15 @@
 .nav-container {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-    
-    .nav-item {
-        display: inline-block;
-        margin: 0 10px;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+
+  .nav-item {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    user-select: none;
+  }
 }

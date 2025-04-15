@@ -1,5 +1,12 @@
 <div class="nav-container">
-    <div class="nav-item" routerLink="">home</div>
-    <div class="nav-item" routerLink="contact">contact</div>
-    <div class="nav-item" routerLink="projects">projects</div>
+  @for (route of routes | async; track $index) {
+  <div
+    class="nav-item"
+    [routerLink]="route.path"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    {{ route.displayName }}
+  </div>
+  }
 </div>

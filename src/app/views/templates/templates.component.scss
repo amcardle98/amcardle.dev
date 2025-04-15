@@ -1,0 +1,106 @@
+// Base styles
+.page-container {
+  margin: 0 auto;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  min-width: 320px;
+  flex-direction: column;
+  background-color: #f3f4f6;
+}
+
+.page-content {
+  display: flex;
+  max-width: 100%;
+  flex: 1;
+  flex-direction: column;
+}
+
+// Header
+.header {
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 0;
+
+  &__container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    text-align: center;
+    max-width: 72rem;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0;
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #fff;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+
+    @media (min-width: 640px) {
+      gap: 1.5rem;
+    }
+
+    a {
+      font-weight: 600;
+      color: #9ca3af;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Hero section
+.hero {
+  background-color: #111827;
+
+  &__content {
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    max-width: 72rem;
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      padding: 8rem 2rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #fff;
+    text-wrap: balance;
+
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+}
+
+// Continue with other component styles...
