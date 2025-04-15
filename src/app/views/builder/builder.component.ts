@@ -8,11 +8,10 @@ import {
 } from '@angular/forms';
 
 @Component({
-  selector: 'app-builder',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './builder.component.html',
-  styleUrls: ['./builder.component.scss'],
+    selector: 'app-builder',
+    imports: [CommonModule, ReactiveFormsModule],
+    templateUrl: './builder.component.html',
+    styleUrls: ['./builder.component.scss']
 })
 export class BuilderComponent {
   builderForm: FormGroup;
